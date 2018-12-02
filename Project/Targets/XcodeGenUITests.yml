@@ -1,0 +1,8 @@
+targets:
+  XcodeGenUITests:
+    platform: iOS
+    type: bundle.ui-testing
+    sources:
+      - XcodeGenUITests
+    dependencies:
+      - target: XcodeGen

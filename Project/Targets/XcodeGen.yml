@@ -1,0 +1,6 @@
+targets:
+  XcodeGen:
+    platform: iOS
+    type: application
+    sources:
+      - XcodeGen

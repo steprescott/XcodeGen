@@ -1,23 +1,6 @@
+include:
+  - Project/targets.yml
+
 name: XcodeGen
 options:
   bundleIdPrefix: me.steprescott
-targets:
-  XcodeGen:
-    platform: iOS
-    type: application
-    sources:
-      - XcodeGen
-  XcodeGenTests:
-    platform: iOS
-    type: bundle.unit-test
-    sources:
-      - XcodeGenTests
-    dependencies:
-      - target: XcodeGen
-  XcodeGenUITests:
-    platform: iOS
-    type: bundle.ui-testing
-    sources:
-      - XcodeGenUITests
-    dependencies:
-      - target: XcodeGen

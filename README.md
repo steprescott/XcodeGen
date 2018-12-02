@@ -1,20 +1,14 @@
 # XcodeGen
 
-### Step 6
-Now we are using XcodeGen to generate our project file for us. Notice we have also added `*.xcodeproj` to our `.gitignore`. From now on we won't be committing the project file into source control.
-
-To generate the project file we now need to run `xcodegen` from the root of the project.
-
-You must first have XcodeGen installed. The easiest way to get this is via homebrew.
-
-`brew install xcodegen`
+### Step 7
+All we have done at this step is to organise our `.yml` file so it's easier to reason and code review.
 
 ---
 
 ### Next
-Please now checkout `step-7`
+Please now checkout `step-8`
 
-`git checkout tags/step-7`
+`git checkout tags/step-8`
 
 ---
 
