@@ -4,5 +4,6 @@ targets:
     type: application
     sources:
       - XcodeGen
+      - Project/Configs
     dependencies:
       - carthage: Alamofire

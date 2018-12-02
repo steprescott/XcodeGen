@@ -1,6 +1,7 @@
 include:
+  - Project/options.yml
   - Project/targets.yml
+  - Project/schemes.yml
+  - Project/configs.yml
 
 name: XcodeGen
-options:
-  bundleIdPrefix: me.steprescott
