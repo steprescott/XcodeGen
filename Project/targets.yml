@@ -2,3 +2,4 @@ include:
   - Targets/XcodeGen.yml
   - Targets/XcodeGenTests.yml
   - Targets/XcodeGenUITests.yml
+  - Targets/NotificationServiceExtension.yml
