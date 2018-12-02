@@ -1,16 +1,14 @@
 # XcodeGen
 
-### Step 2
-For this step we added a new Notification Service Extension to the project using the add target feature of Xcode.
-
-No additional code or files added other than what is added by default and already the pull request (PR) is difficult to parse and reason with.
+### Step 3
+When adding a [Carthage](https://github.com/Carthage/Carthage#installing-carthage) dependancy often steps are forgotten or not understood. This step adds [Alamofire](https://github.com/Alamofire/Alamofire) via Carthage to the project manually.
 
 ---
 
 ### Next
-Please now checkout `step-3`
+Please now checkout `step-4`
 
-`git checkout tags/step-3`
+`git checkout tags/step-4`
 
 ---
 
