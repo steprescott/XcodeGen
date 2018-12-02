@@ -1,16 +1,16 @@
 # XcodeGen
 
-### Step 8
-We have now added a new Notification Service Extension tarted to the app by simply adding 9 short lines across two `.yml` files.
+### Step 9
+This step we want to add Alamofire via Carthage as a dependency on the main target.
 
-It is now a lot easier to code review the settings and what the change will bring.
+With a **5 line change**, that includes adding the Cartfile, Cartfile.resolved, the change to the `.yml` & adding `import Alamofire` into the `AppDelegate.swift,` we have added a new dependency and it has been linked up correctly and the correct settings and run build phase added.
 
 ---
 
 ### Next
-Please now checkout `step-9`
+Please now checkout `step-10`
 
-`git checkout tags/step-9`
+`git checkout tags/step-10`
 
 ---
 
