@@ -18,6 +18,8 @@
 		8B5391BF21B41ABF00E124A0 /* Notification Service Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8B59760921B42BA5000554EF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B53938A21B4226D00E124A0 /* Alamofire.framework */; };
 		8B59760A21B42BA5000554EF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B53938A21B4226D00E124A0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8B59760F21B42CA3000554EF /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8B59760D21B42CA3000554EF /* Development.xcconfig */; };
+		8B59761021B42CA3000554EF /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8B59760E21B42CA3000554EF /* Production.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8B53914421B4057D00E124A0 /* XcodeGen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeGen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B53914421B4057D00E124A0 /* Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B53914721B4057D00E124A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B53914921B4057D00E124A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B53914C21B4057D00E124A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		8B5391BA21B41ABF00E124A0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		8B5391BC21B41ABF00E124A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B53938A21B4226D00E124A0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		8B59760D21B42CA3000554EF /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		8B59760E21B42CA3000554EF /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		8B53913B21B4057D00E124A0 = {
 			isa = PBXGroup;
 			children = (
+				8B59760C21B42CA3000554EF /* Configs */,
 				8B5391C521B4222B00E124A0 /* Carthage */,
 				8B53914621B4057D00E124A0 /* XcodeGen */,
 				8B53915B21B4057F00E124A0 /* XcodeGenTests */,
@@ -137,7 +142,7 @@
 		8B53914521B4057D00E124A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B53914421B4057D00E124A0 /* XcodeGen.app */,
+				8B53914421B4057D00E124A0 /* Dev.app */,
 				8B53915821B4057F00E124A0 /* XcodeGenTests.xctest */,
 				8B53916321B4057F00E124A0 /* XcodeGenUITests.xctest */,
 				8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */,
@@ -202,6 +207,15 @@
 			path = Build/iOS;
 			sourceTree = "<group>";
 		};
+		8B59760C21B42CA3000554EF /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				8B59760D21B42CA3000554EF /* Development.xcconfig */,
+				8B59760E21B42CA3000554EF /* Production.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,7 +236,7 @@
 			);
 			name = XcodeGen;
 			productName = XcodeGen;
-			productReference = 8B53914421B4057D00E124A0 /* XcodeGen.app */;
+			productReference = 8B53914421B4057D00E124A0 /* Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8B53915721B4057F00E124A0 /* XcodeGenTests */ = {
@@ -332,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B53915221B4057F00E124A0 /* LaunchScreen.storyboard in Resources */,
+				8B59761021B42CA3000554EF /* Production.xcconfig in Resources */,
 				8B53914F21B4057F00E124A0 /* Assets.xcassets in Resources */,
+				8B59760F21B42CA3000554EF /* Development.xcconfig in Resources */,
 				8B53914D21B4057D00E124A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +475,7 @@
 /* Begin XCBuildConfiguration section */
 		8B53916A21B4057F00E124A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B59760D21B42CA3000554EF /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -520,6 +537,7 @@
 		};
 		8B53916B21B4057F00E124A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B59760E21B42CA3000554EF /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -575,6 +593,7 @@
 		};
 		8B53916D21B4057F00E124A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B59760D21B42CA3000554EF /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -588,8 +607,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.steprescott.XcodeGen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -597,6 +616,7 @@
 		};
 		8B53916E21B4057F00E124A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B59760E21B42CA3000554EF /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -610,8 +630,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.steprescott.XcodeGen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -705,7 +725,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.steprescott.XcodeGen.Notification-Service-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER).Notification-Service-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -723,7 +743,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.steprescott.XcodeGen.Notification-Service-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER).Notification-Service-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
