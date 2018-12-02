@@ -14,6 +14,8 @@
 		8B53915221B4057F00E124A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B53915021B4057F00E124A0 /* LaunchScreen.storyboard */; };
 		8B53915D21B4057F00E124A0 /* XcodeGenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53915C21B4057F00E124A0 /* XcodeGenTests.swift */; };
 		8B53916821B4057F00E124A0 /* XcodeGenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53916721B4057F00E124A0 /* XcodeGenUITests.swift */; };
+		8B5391BB21B41ABF00E124A0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5391BA21B41ABF00E124A0 /* NotificationService.swift */; };
+		8B5391BF21B41ABF00E124A0 /* Notification Service Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = 8B53914321B4057D00E124A0;
 			remoteInfo = XcodeGen;
 		};
+		8B5391BD21B41ABF00E124A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B53913C21B4057D00E124A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B5391B721B41ABF00E124A0;
+			remoteInfo = "Notification Service Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B5391C321B41ABF00E124A0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8B5391BF21B41ABF00E124A0 /* Notification Service Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8B53914421B4057D00E124A0 /* XcodeGen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeGen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +70,9 @@
 		8B53916321B4057F00E124A0 /* XcodeGenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeGenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B53916721B4057F00E124A0 /* XcodeGenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGenUITests.swift; sourceTree = "<group>"; };
 		8B53916921B4057F00E124A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Notification Service Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5391BA21B41ABF00E124A0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		8B5391BC21B41ABF00E124A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +97,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B5391B521B41ABF00E124A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +113,7 @@
 				8B53914621B4057D00E124A0 /* XcodeGen */,
 				8B53915B21B4057F00E124A0 /* XcodeGenTests */,
 				8B53916621B4057F00E124A0 /* XcodeGenUITests */,
+				8B5391B921B41ABF00E124A0 /* Notification Service Extension */,
 				8B53914521B4057D00E124A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +124,7 @@
 				8B53914421B4057D00E124A0 /* XcodeGen.app */,
 				8B53915821B4057F00E124A0 /* XcodeGenTests.xctest */,
 				8B53916321B4057F00E124A0 /* XcodeGenUITests.xctest */,
+				8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +160,15 @@
 			path = XcodeGenUITests;
 			sourceTree = "<group>";
 		};
+		8B5391B921B41ABF00E124A0 /* Notification Service Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8B5391BA21B41ABF00E124A0 /* NotificationService.swift */,
+				8B5391BC21B41ABF00E124A0 /* Info.plist */,
+			);
+			path = "Notification Service Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +179,12 @@
 				8B53914021B4057D00E124A0 /* Sources */,
 				8B53914121B4057D00E124A0 /* Frameworks */,
 				8B53914221B4057D00E124A0 /* Resources */,
+				8B5391C321B41ABF00E124A0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8B5391BE21B41ABF00E124A0 /* PBXTargetDependency */,
 			);
 			name = XcodeGen;
 			productName = XcodeGen;
@@ -181,6 +227,23 @@
 			productReference = 8B53916321B4057F00E124A0 /* XcodeGenUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8B5391B721B41ABF00E124A0 /* Notification Service Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B5391C221B41ABF00E124A0 /* Build configuration list for PBXNativeTarget "Notification Service Extension" */;
+			buildPhases = (
+				8B5391B421B41ABF00E124A0 /* Sources */,
+				8B5391B521B41ABF00E124A0 /* Frameworks */,
+				8B5391B621B41ABF00E124A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Notification Service Extension";
+			productName = "Notification Service Extension";
+			productReference = 8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +265,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 8B53914321B4057D00E124A0;
 					};
+					8B5391B721B41ABF00E124A0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 8B53913F21B4057D00E124A0 /* Build configuration list for PBXProject "XcodeGen" */;
@@ -220,6 +286,7 @@
 				8B53914321B4057D00E124A0 /* XcodeGen */,
 				8B53915721B4057F00E124A0 /* XcodeGenTests */,
 				8B53916221B4057F00E124A0 /* XcodeGenUITests */,
+				8B5391B721B41ABF00E124A0 /* Notification Service Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +310,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8B53916121B4057F00E124A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B5391B621B41ABF00E124A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +351,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B5391B421B41ABF00E124A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B5391BB21B41ABF00E124A0 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +371,11 @@
 			isa = PBXTargetDependency;
 			target = 8B53914321B4057D00E124A0 /* XcodeGen */;
 			targetProxy = 8B53916421B4057F00E124A0 /* PBXContainerItemProxy */;
+		};
+		8B5391BE21B41ABF00E124A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B5391B721B41ABF00E124A0 /* Notification Service Extension */;
+			targetProxy = 8B5391BD21B41ABF00E124A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,6 +518,7 @@
 		8B53916D21B4057F00E124A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XcodeGen/Info.plist;
@@ -448,6 +536,7 @@
 		8B53916E21B4057F00E124A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XcodeGen/Info.plist;
@@ -540,6 +629,42 @@
 			};
 			name = Release;
 		};
+		8B5391C021B41ABF00E124A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Notification Service Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.steprescott.XcodeGen.Notification-Service-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B5391C121B41ABF00E124A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Notification Service Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.steprescott.XcodeGen.Notification-Service-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,6 +700,15 @@
 			buildConfigurations = (
 				8B53917321B4057F00E124A0 /* Debug */,
 				8B53917421B4057F00E124A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B5391C221B41ABF00E124A0 /* Build configuration list for PBXNativeTarget "Notification Service Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B5391C021B41ABF00E124A0 /* Debug */,
+				8B5391C121B41ABF00E124A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

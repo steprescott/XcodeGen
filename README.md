@@ -1,16 +1,16 @@
 # XcodeGen
 
-### Step 1
-If you look at the files for this repo at this stage you will find all that is added when you create a blank empty project with unit & UI test targets. Nothing else, just a blank default project.
+### Step 2
+For this step we added a new Notification Service Extension to the project using the add target feature of Xcode.
 
-Already there are close to 1000 lines of code that you haven't added.
+No additional code or files added other than what is added by default and already the pull request (PR) is difficult to parse and reason with.
 
 ---
 
 ### Next
-Please now checkout `step-2`
+Please now checkout `step-3`
 
-`git checkout tags/step-2`
+`git checkout tags/step-3`
 
 ---
 
