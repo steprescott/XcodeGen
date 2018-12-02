@@ -1,14 +1,16 @@
 # XcodeGen
 
-### Step 7
-All we have done at this step is to organise our `.yml` file so it's easier to reason and code review.
+### Step 8
+We have now added a new Notification Service Extension tarted to the app by simply adding 9 short lines across two `.yml` files.
+
+It is now a lot easier to code review the settings and what the change will bring.
 
 ---
 
 ### Next
-Please now checkout `step-8`
+Please now checkout `step-9`
 
-`git checkout tags/step-8`
+`git checkout tags/step-9`
 
 ---
 
