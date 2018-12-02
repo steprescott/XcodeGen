@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export PATH=/usr/local/bin:$PATH
+
+set -e
+
+echo "🏃‍♂️ Running post-merge hook"
+
+xcodegen
