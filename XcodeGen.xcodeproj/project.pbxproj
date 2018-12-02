@@ -16,6 +16,8 @@
 		8B53916821B4057F00E124A0 /* XcodeGenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53916721B4057F00E124A0 /* XcodeGenUITests.swift */; };
 		8B5391BB21B41ABF00E124A0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5391BA21B41ABF00E124A0 /* NotificationService.swift */; };
 		8B5391BF21B41ABF00E124A0 /* Notification Service Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8B59760921B42BA5000554EF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B53938A21B4226D00E124A0 /* Alamofire.framework */; };
+		8B59760A21B42BA5000554EF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B53938A21B4226D00E124A0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B59760B21B42BA5000554EF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8B59760A21B42BA5000554EF /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +86,7 @@
 		8B5391B821B41ABF00E124A0 /* Notification Service Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Notification Service Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5391BA21B41ABF00E124A0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		8B5391BC21B41ABF00E124A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B53938A21B4226D00E124A0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B59760921B42BA5000554EF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +125,7 @@
 		8B53913B21B4057D00E124A0 = {
 			isa = PBXGroup;
 			children = (
+				8B5391C521B4222B00E124A0 /* Carthage */,
 				8B53914621B4057D00E124A0 /* XcodeGen */,
 				8B53915B21B4057F00E124A0 /* XcodeGenTests */,
 				8B53916621B4057F00E124A0 /* XcodeGenUITests */,
@@ -169,6 +185,23 @@
 			path = "Notification Service Extension";
 			sourceTree = "<group>";
 		};
+		8B5391C521B4222B00E124A0 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				8B53938721B4226D00E124A0 /* iOS */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		8B53938721B4226D00E124A0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B53938A21B4226D00E124A0 /* Alamofire.framework */,
+			);
+			name = iOS;
+			path = Build/iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +213,7 @@
 				8B53914121B4057D00E124A0 /* Frameworks */,
 				8B53914221B4057D00E124A0 /* Resources */,
 				8B5391C321B41ABF00E124A0 /* Embed App Extensions */,
+				8B59760B21B42BA5000554EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +268,7 @@
 				8B5391B421B41ABF00E124A0 /* Sources */,
 				8B5391B521B41ABF00E124A0 /* Frameworks */,
 				8B5391B621B41ABF00E124A0 /* Resources */,
+				8B53939021B4228A00E124A0 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -324,6 +359,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B53939021B4228A00E124A0 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B53914021B4057D00E124A0 /* Sources */ = {
@@ -521,6 +579,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = XcodeGen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -539,6 +601,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = XcodeGen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
