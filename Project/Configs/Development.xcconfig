@@ -1,0 +1,9 @@
+//
+//  Development.xcconfig
+//  XcodeGen
+//
+//  Created by Prescott, Ste on 02/12/2018.
+//
+
+PRODUCT_NAME = Dev
+PRODUCT_BUNDLE_IDENTIFIER = me.steprescott.xcodegen-dev

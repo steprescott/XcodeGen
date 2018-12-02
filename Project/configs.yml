@@ -1,0 +1,7 @@
+configs:
+  Development: debug
+  Production: release
+
+configFiles:
+  Development: Project/Configs/Development.xcconfig
+  Production: Project/Configs/Production.xcconfig

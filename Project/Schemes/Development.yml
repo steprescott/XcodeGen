@@ -1,0 +1,21 @@
+schemes:
+  Development:
+    build:
+      parallelizeBuild: true
+      targets:
+        XcodeGen: all
+        XcodeGenTests: testing
+        XcodeGenUITests: testing
+    run:
+      config: Development
+    test:
+      config: Development
+      targets: 
+        - XcodeGenTests
+        - XcodeGenUITests
+    profile:
+      config: Development
+    analyze:
+      config: Development
+    archive:
+      config: Development
